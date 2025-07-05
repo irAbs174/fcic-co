@@ -1,0 +1,9 @@
+climage
+bs4
+django
+requests
+colorama
+selenium
+webdriver-manager
+WooCommerce
+kavenegar

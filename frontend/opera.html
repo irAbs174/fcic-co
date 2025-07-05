@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% if user.is_authenticated%}
+{% block BODY %}
+<div class="tracking-card">
+    <!-- Header -->
+    <header>
+        <h1>به سادگی یک دو سه</h1>
+    </header>
+
+    <!-- Frame 1 -->
+    <div class="container d-flex justify-content-center mt-3">
+            <img src="https://123kif.com/wp-content/uploads/2020/07/123-logo-1.webp" alt="123KIF Icon" width="200" height="auto" class="img-icon">
+    </div>
+
+    <!-- Frame 2 -->
+    <div class="frame2">
+        <p><strong>شماره سفارش:</strong></p>
+        <input type="text" class="order-input order_code" placeholder="کد سفارش مشتری گیرنده  ">
+        <p><strong>نام و نام خانوادگی:</strong></p>
+        <input type="text" class="order-input full_name" placeholder="نام کامل گیرنده پیامک | مثل: یاور یاوری">
+        <p><strong>کد رهگیری مرسوله پستی:</strong></p>
+        <input type="text" class="order-input tracking_code" placeholder="بارکد ۱۶ الی ۲۴ رقمی پستی">
+        <p><strong>شماره تماس:</strong></p>
+        <input type="text" class="order-input phone_number" placeholder="شماره تماس گیرنده پیامک">
+        <button class="btn-send-code">ثبت کد مرسوله</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-3">
+        <p>تمامی حقوق برای <a href="https://123kif.com">یک دو سه کیف</a> محفوظ است © 2024</p>
+    </footer>
+</div>
+
+    <!-- Centered Card Container -->
+
+    {% block JS %}
+    <script src="assets/js/upload.js"></script>
+    {% endblock JS %}
+{%endif%}
+    
+{% endblock BODY %}
